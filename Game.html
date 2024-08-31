@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="game">
+<p>
+<pre class="title">
+<span style="color: red; font-weight: bold; font-size: 30px; position: absolute;
+top: 70px; left: 62px;">Play</span> <span style="color: yellow; font-style: italic; position: absolute; top: 112px; left: 60px; font-size: 30px;">Game</span> Now!
+    Choose one of them.          
+</pre>
+</p>
+<p>
+    <button class="playbtn" onclick="
+    playGame('rock');
+    changeImage('https://cdn-icons-png.flaticon.com/128/4405/4405457.png');
+    "><img src="https://cdn-icons-png.flaticon.com/128/4405/4405457.png" alt="Rock"></button>
+
+    <button class="playbtn" onclick ="
+    playGame('paper');
+    changeImage('https://cdn-icons-png.flaticon.com/128/737/737804.png');
+    "><img src="https://cdn-icons-png.flaticon.com/128/737/737804.png" alt="paper">
+    </button>
+
+    <button class="playbtn" onclick ="
+    playGame('scissors');
+    changeImage('https://cdn-icons-png.flaticon.com/128/10363/10363577.png');
+    "><img src="https://cdn-icons-png.flaticon.com/128/10363/10363577.png" alt="scissor">
+    </button>
+</p>
+<p class="name">
+    Rock Paper Scissor
+</p>
+</div>
+<div class="score-board">
+  <ul class="shead">
+    <li>Win</li>
+    <li>Loses</li>
+    <li>Ties</li>
+  </ul>
+  <p class="score-update"></p>
+</div>
+<div><button class="resetbtn" onclick="
+  score.wins = 0;
+  score.loses= 0;
+  score.ties= 0;
+  localStorage.removeItem('score');
+  scoreUpdate();
+">Reset Score</button></div>
+</div>
+</body>
+<script src="script1.js"></script>
+</html>
